@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+   background-image: url(mac.jpg);
+   color: aliceblue;
+}
+pre {
+    color: rgb(247, 247, 247);
+  align-items: center;  
+}
+table{
+    align-items: center;
+    color: aliceblue;
+}
+h1 {
+    color: blue;
+    text-decoration: underline;
+}
+h2 {
+    color: blueviolet;
+    text-decoration: underline;
+}
+h3 {
+    color: brown;
+    text-decoration: underline;
+}
