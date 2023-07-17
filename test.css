@@ -10,6 +10,10 @@ pre {
 table{
     align-items: center;
     color: aliceblue;
+    margin-left: 25%;  
+    text-align: left;
+    border: none;
+     
 }
 h1 {
     color: blue;
@@ -22,4 +26,28 @@ h2 {
 h3 {
     color: brown;
     text-decoration: underline;
+}
+th, td{
+    border: 1px solid red;
+    background-color: aqua;
+    border-radius: 10px;
+    border-style: dotted;
+    margin-left: 50%;
+    color: red;
+
+
+}
+tr{
+    height: 20px;
+    border-bottom: 1px solid #add;
+}
+tr :nth-child(odd){
+    background-color: blue;
+}
+th:nth-child(even){
+    background-color: #ffff;
+}
+tr :hover{
+    background-color: black;
+    cursor: pointer;
 }

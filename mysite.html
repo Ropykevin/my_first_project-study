@@ -2,23 +2,28 @@
 <html>
     <head>
     <title> My Profile</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="http://d1ujqdpfgkvqfi.cloudfront.net/favicon-generator/htdocs/favicons/2015-01-14/00891c535c8a50e09c26392a56940846.ico">
+        <link rel="stylesheet" href="mysite.css">
         </head>
     <body>
-        <h1>Ropy Kevin</h1>
-        <img src="photo-1511367461989-f85a21fda167.jpg" width="300px" alt="web image">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Dolor omnis, non sapiente rem hic eligendi cupiditate blanditiis nihil modi voluptas vitae earum et. Sunt, nobis commodi facere ipsa quasi voluptate.</p>
-        <h3> My Skills</h3>
+        <div class="intro"><h1>Ropy Kevin</h1>
+        <img style="align-items: center;" class="profile-pic" src="photo-1511367461989-f85a21fda167.jpg" width="300px" alt="web image">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Dolor omnis, non sapiente rem hic eligendi cupiditate <br> blanditiis nihil modi voluptas vitae earum et. Sunt, nobis <br>commodi facere ipsa quasi voluptate.</p>
+    </div>
+        <div class="skills"><h3> My Skills</h3>
 
         <ol>
             <li>Web development</li>
             <li>web design</li>
             <li>seo</li>
             <li>digital marketing</li>
+        </div>
         </ol>
         <h3>my projects</h3>
-        <table border="1">
+        <table class="table" border="1">
             <thead>
                 <tr>
                     <th>No.</th>
@@ -58,7 +63,7 @@
 
             </tbody>
         </table>
-        <h3>contact me</h3>
+        <h3 class="contact">contact me</h3>
         <form> 
             
             <input name="full_name" type="text" id="full_name" placeholder="enter fullname">
