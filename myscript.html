@@ -22,23 +22,22 @@
 </head>
 
 <body>
-    <div id="el-one" class="el-one">
-        30
+    <div class="pi" id="pi">
+        3.142
     </div>
-    <div id="el-two" class="el-two">
-        50
+    <div class="r" id="r">
+        7
     </div>
-    <div id="el-two" class="el-three">
-    </div>
+    <div class="total"
+     id="total"></div>
+
     
     <script>
-        let x = document.getElementById(el-one).innerHTML;
-        let y = document.getElementById(el-two).innerHTML;
-        let z = x + y
-        document.getElementById(el-three).innerHTML=z;
-        console.log(z);
-
-
+        let pi =document.getElementById("p1").innerText;
+        let r =document.getElementById("r".innerText);
+        let area = Number(pi) * number(r) * Number(r);
+        document.getElementById("total").innerText =area;
+        
     </script>
 </body>
 
