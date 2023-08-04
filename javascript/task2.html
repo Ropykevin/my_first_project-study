@@ -14,8 +14,8 @@
         Number = "";
         console.log(Number >= 0 && Number <= 100);
         // Console log a boolean that gives you true only when an email is a valid email. Do not use regular expressions.
-        let email = "@";
-        console.log(email.indexOf("@") > 0)
+        let email = "ropy.@";
+        console.log((email.indexOf("@") > 0) && (email.indexOf('.')-email.indexOf('@')>1) && (email.indexOf('@')>0) && (email.indexOf('.')+1!= email.length))
         // Console log a boolean that gives you true only when a phone number is a valid kenyan phone number. -->
         let phoneNumber = "+254742670714";
         //    "+254"// num2 ="07"// num3 ="01"
