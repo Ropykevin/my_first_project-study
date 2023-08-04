@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Assignment 1: Combine Arrays
+        //Given two arrays arr1 and arr2, combine them into a single array combinedArray using the .concat() method. Then, remove the first element from combinedArray using the .shift() method. Finally, print the modified combinedArray.
+        let arr1 = ['kevin', 'ken', 'ivy', 'loise', 'terence'];
+        let arr2 = [20, 'twenty', 10, 'ten', 30, 'therthy', 40];
+        let arr3 = (arr1.concat(arr2))
+        console.log(arr3)
+        arr3.shift()
+        console.log(arr3)
+        // Assignment 2: Extract Subarray
+        // Given an array sourceArray, extract a subarray extractedArray from index 2 to index 4(end index not inclusive) using the.slice() method.Then, modify the extractedArray by replacing its elements with 'x', 'y', and 'z' using the.splice() method.Finally, print both the sourceArray and the modified extractedArray.
+        let sourceArray = ['kevin', 'ken', 'ivy', 'loise', 'terence', 20, 'twenty', 10, 'ten', 30, 'therthy', 40]
+        console.log(sourceArray)
+        let extractedArray = [sourceArray.slice(2,5)];
+        console.log(extractedArray)
+        extractedArray.splice(0,3,'x','y','z')
+        console.log(extractedArray)
+    </script>
+</body>
+
+</html>
