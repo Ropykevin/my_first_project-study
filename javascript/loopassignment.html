@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+    </script>
+    <script src="countries.js"></script>
+    <script>
+        console.log(countries)
+        let populationRanges = {
+            "0-50": [],
+            "50-100": [],
+            ">100": []
+        };
+
+        for (let i = 0; i < countries.length; i++) {
+            if (countries[i].population <= 50000000) {
+                populationRanges["0-50"].push(countries[i].population);
+            } else if (countries[i].population > 50000000 && countries[i].population <= 100000000) {
+                populationRanges["50-100"].push(countries[i].population);
+            } else{
+                populationRanges[">100"].push(countries[i].population);
+            }
+                
+            }
+        
+
+        console.log("0>50m",populationRanges["0-50"].length);
+        console.log( "50m>100m",populationRanges["50-100"].length);
+        console.log("100m+",populationRanges[">100"].length);
+        console.log("I am from",countries['111'])
+
+    </script>
+</body>
+
+</html>

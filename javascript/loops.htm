@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //display numbers from 20 to 80
+        for (let i = 20; i <= 80; i++) {
+            console.log(i)
+        }
+
+        // improve one above to only display numbers divisible by 7
+        for (let i = 20; i <= 80; i++) {
+            if (i % 7 === 0) {
+                console.log('r', i);
+            }
+        }
+        //instead of displaing store the values in 2 above in an array
+        // Create an empty array to store the numbers divisible by 7
+        let numbersDivisibleby7 = [];
+                for (let i = 20; i <= 80; i++) {
+            if (i % 7 === 0) {
+                numbersDivisibleby7.push(i);
+            }
+        }
+        //display the array with all the values
+        console.log(numbersDivisibleby7);
+        //display how many countries have poppulation btw 0>=50m,50m-100m, >100m
+
+
+    </script>
+</body>
+
+</html>

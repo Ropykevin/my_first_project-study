@@ -16,9 +16,9 @@
             "pp2": ["mike", "ann", "jay"]
         }
         console.log(students["pp1"][1])
-        // typeof (students["pp2"])
-        //create an object that can be used to store voter registration  detailsfrom iebc.Ensure you have name 
-        //,county,subcounty,ward.The object should be able to accomodate 18 million voters. add atleast 3 voters
+        typeof (students["pp2"])
+        // create an object that can be used to store voter registration  detailsfrom iebc.Ensure you have name 
+        // ,county,subcounty,ward.The object should be able to accomodate 18 million voters. add atleast 3 voters
         let total_Voters={
             "35896851": { "name": "Ropy Kevin", "county": "Nairobi", "subcounty": "Kiambu", "ward": "Kiambu" },
             "22556810": { "name": "Ken Kivuti", "county": "Kisumu", "subcounty": "Kisumu", "ward": "Kisumu" },
@@ -26,7 +26,16 @@
         }
         
         console.log(total_Voters["35896851"])
-
+        let person = {
+            "first_name" : "John",
+            "last_name"  : "Doe",
+            "age" : 30,
+            "locations" : ["Nrb","Msa","Ktl","Kti"],
+            "kins" : [{"name":"Mary","phone":"0725352"},
+                      {"name":"Tom","phone":"0725352123"}
+                     ]
+        }
+        console.log(person["kins"][1]["name"])
 
 
 
