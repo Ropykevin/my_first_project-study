@@ -10,9 +10,8 @@
 <body>
     <script>
         /*
-        Using Python or PHP or Java or Ruby or JavaScript
-Write a program input a password. Give them only 4 attempts to check the passwords entered against “admin@123”. If the password is correct access is granted. After you show them a message , the account is blocked.
-
+        Write a program input a password. Give them only 4 attempts to check the passwords entered against “admin@123”.
+         If the password is correct access is granted. After you show them a message , the account is blocked.
         */
         let password = "admin@123";
         let attempts = 0;
@@ -21,6 +20,7 @@ Write a program input a password. Give them only 4 attempts to check the passwor
             let input = prompt();
             if (input === password) {
                 console.log("Access granted.");
+                break;
             } else {
                 attempts++;
                 console.log("Incorrect password. You have " + (4 - attempts) + " attempts left.");
