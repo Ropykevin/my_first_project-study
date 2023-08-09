@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <Script>
+//: Using Python or PHP or Java or Ruby or JavaScript
+// Write a program that takes the date of birth of a person and the program outputs the age in terms of years,months,days TODAY.
+
+        let today = new Date();
+        let birthDate = new Date(1999, 12, 31);
+        let years = today.getFullYear() - birthDate.getFullYear();
+        let months = today.getMonth() - birthDate.getMonth();
+        let days = today.getDate() - birthDate.getDate();
+        console.log(`You are ${years} years, ${months} months, and ${days} days old.`);
+    </Script>
+</body>
+
+</html>

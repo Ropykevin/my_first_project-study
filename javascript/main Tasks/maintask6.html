@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Using Python or PHP or Java or Ruby or JavaScript
+Write a program input a password. Give them only 4 attempts to check the passwords entered against “admin@123”. If the password is correct access is granted. After you show them a message , the account is blocked.
+
+        */
+        let password = "admin@123";
+        let attempts = 0;
+        while (attempts < 4) {
+            console.log("Enter your password:");
+            let input = prompt();
+            if (input === password) {
+                console.log("Access granted.");
+            } else {
+                attempts++;
+                console.log("Incorrect password. You have " + (4 - attempts) + " attempts left.");
+            }
+        }
+        if (attempts === 4) {
+            console.log("Your account has been blocked.");
+        }
+    </script>
+</body>
+
+</html>

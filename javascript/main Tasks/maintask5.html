@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            Using Python or PHP or Java or Ruby or JavaScriptImplement a program that takes 3 form inputs
+            or from the terminal,and stores them in three letiables. Return the largest of the three.
+              Do this without using the the inbuilt max () function!The goal of this exercise is to think
+              about some internals that programs normally take care of for us. 
+        */
+        let num1 = parseInt(prompt("Enter the first number:"));
+        let num2 = parseInt(prompt("Enter the second number:"));
+        let num3 = parseInt(prompt("Enter the third number:"));
+        if (num1 > num2 && num1 > num3) {
+            console.log("The largest number is "+num1)
+        }
+        else if (num2 > num1 && num2 > num3)
+            console.log("The largest number is" +num2)
+        else {
+            console.log("The largest number is "+num3)
+        }
+
+    </script>
+</body>
+
+</html>

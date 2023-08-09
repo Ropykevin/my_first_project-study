@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //         Using Python or PHP or Java or Ruby or JavaScript
+        // Write a program that takes as input the speed of a car e.g 80. If the speed is less than 70, it should print “Ok”. Otherwise, for every 5 km/s above the speed limit (70), it should give the driv20er one demerit point and print the total number of demerit points.
+        // For example, if the speed is 80, it should print: “Points: 2”. If the driver gets more than 12 points, the function should print: “License suspended”.
+        let speed = parseInt(prompt("Enter the speed of the car in km/h: "));
+        if (speed <=70) {
+            console.log("Ok");
+        } else {
+            let demeritPoints =(speed - 70) / 5;
+            console.log("Points: " + demeritPoints);
+            if (demeritPoints > 12) {
+                console.log("License suspended");
+            }
+        }
+    </script>
+</body>
+
+</html>

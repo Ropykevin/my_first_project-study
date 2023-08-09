@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*Using Python or PHP or Java or Ruby or JavaScript
+    Write a program which gets a phone number from a form input or terminal. Validates the phone number by checking if 
+    it starts with +254.. or 07.. or 71… or 254.. or 01... Convert the number to start with +254… 
+    e.g if a user enters “0712345678”, the program should display “+254712345678”
+    e.g if a user enters “0112345678”, the program should display “+254112345678”
+    e.g if a user enters “712345678”, the program should display “+254712345678”*/
+        let phoneNum = prompt("Enter your phone number:");
+        if (phoneNum.startsWith("+254") && phoneNum.length == 13) {
+            console.log("The phone number is valid.");
+        }
+        else if (phoneNum.startsWith("07" || "01") && phoneNum.length == 10) {
+            let newPhoneNum = "+254" + phoneNum.substring(1);
+            console.log("The new phone number is " + newPhoneNum);
+
+        } else if (phoneNum.startsWith("254") && phoneNum.length == 12) {
+            let newPhoneNum = "+254" + phoneNum.substring(3);
+            console.log("The new phone number is " + newPhoneNum);
+        }
+        else if (phoneNum.startsWith("254") && phoneNum.length == 12) {
+            let newPhoneNum = "+254" + phoneNum.substring(0);
+            console.log("The new phone number is " + newPhoneNum);
+        } else if (phoneNum.startsWith("7") && phoneNum.length == 9) {
+            let newPhoneNum = "+254" + phoneNum.substring(0)
+            console.log(newPhoneNum)
+        }
+        else {
+            console.log("invalid")
+        }
+
+
+
+    </script>
+</body>
+
+</html>
