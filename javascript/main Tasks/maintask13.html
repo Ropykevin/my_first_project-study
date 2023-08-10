@@ -18,7 +18,7 @@
         while (tries < 3) {
             let email = prompt("Enter your email address: ");
             let password = prompt("Enter your password: ");
-            if (email === "admin@mail.com" && password === "Admin@123") {
+            if (email == "admin@mail.com" && password == "Admin@123") {
                 console.log("Login is successful!");
                 break;
             } else {
@@ -26,7 +26,7 @@
                 tries++;
             }
         }
-        if (tries === 3) {
+        if (tries == 3) {
             console.log("You have been blocked.");
         }
     </script>
