@@ -9,17 +9,67 @@
 
 <body>
     <script>
-        /*Using Python or PHP or Java or Ruby or JavaScript
-Write a program that takes input of 2 values and adds them. The program should only accept numbers 
-and floats only or otherwise display an error “invalid character entered” and take the user to re-enter the inputs .
-*/
-        let num1 = prompt("Enter a number: ");
-        let num2 = prompt("Enter a number: ");
-        if (isNaN(num1) || isNaN(num2)) {
-            console.log("Invalid character entered");
+        //   Using Python or PHP or Java or Ruby or JavaScript
+        // Write a program that takes input of someone's basic salary and benefits, adds them to find the gross salary then uses  the gross salary to find the NHIF. 
+        // To find the Kenya NHIF Rate using THIS LINK:  
+
+        // Get the user's input
+        // Get the user's input
+        let basic_salary = parseFloat(prompt("Enter your basic salary: "));
+        let benefits = parseFloat(prompt("Enter your benefits: "));
+        // Calculate the gross salary
+        let gross_salary = basic_salary + benefits;
+
+        if (gross_salary <= 5999) {
+            NHIF_contribution = 150
+                ;
+        } else if (gross_salary >= 6000 && gross_salary <= 7999) {
+            NHIF_contribution = 300
+        } else if (gross_salary >= 8000 && gross_salary <= 11999) {
+            NHIF_contribution = 400
+        } else if (gross_salary >= 12000 && gross_salary <= 14999) {
+            NHIF_contribution = 500
+        } else if (gross_salary >= 15000 && gross_salary <= 19999) {
+            NHIF_contribution = 600
+        } else if (gross_salary >= 20000 && gross_salary <= 24999) {
+            NHIF_contribution = 750
         }
-        let sum = num1 + num2;
-        console.log(`The sum of ${num1} and ${num2} is ${sum}`);
+        else if (gross_salary >= 25000 && gross_salary <= 29999) {
+            NHIF_contribution = 850
+        }
+        else if (gross_salary >= 20000 && gross_salary <= 34999) {
+            NHIF_contribution = 900
+        }
+        else if (gross_salary >= 20000 && gross_salary <= 39999) {
+            NHIF_contribution = 950
+        }
+        else if (gross_salary >= 20000 && gross_salary <= 44999) {
+            NHIF_contribution = 100
+        }
+        else if (gross_salary >= 20000 && gross_salary <= 49999) {
+            NHIF_contribution = 110
+        }
+        else if (gross_salary >= 20000 && gross_salary <= 59999) {
+            NHIF_contribution = 1200
+        }
+        else if (gross_salary >= 20000 && gross_salary <= 69999) {
+            NHIF_contribution = 1300
+        }
+        else if (gross_salary >= 20000 && gross_salary <= 79999) {
+            NHIF_contribution = 1400
+        }
+        else if (gross_salary >= 20000 && gross_salary <= 89999) {
+            NHIF_contribution = 1500
+        }
+        else if (gross_salary >= 20000 && gross_salary <= 99999) {
+            NHIF_contribution = 1600
+        }
+        else {
+            NHIF_contribution = 1700
+        }
+
+        console.log("Your gross salary is: " + gross_salary);
+        console.log("Your NHIF contribution is: " + NHIF_contribution);
     </script>
 </body>
 

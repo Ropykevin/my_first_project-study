@@ -2,8 +2,8 @@ let userName = ""
 userName ? console.log(`Hello, ${userName}!`):console.log('Hello!')
 let userQuestion =""
 console.log(userQuestion)
-const randoNumber = Math.floor(Math.random()*8)
-const eightBall=1
+let randoNumber = Math.floor(Math.random()*8)
+let eightBall=1
 switch(eightBall){
   case 0:
   console.log('It is certain')
