@@ -13,10 +13,14 @@
 // Write a program that takes the date of birth of a person and the program outputs the age in terms of years,months,days TODAY.
 
         let today = new Date();
-        let birthDate = new Date("1999, 5, 16");
-        let years = today.getFullYear() - birthDate.getFullYear();
-        let months = today.getMonth() - birthDate.getMonth();
-        let days = birthDate.getDate()-today.getDate() ;
+        let birthDate = new Date("1999, 9 , 14");
+        let years = (today.getFullYear() - birthDate.getFullYear());
+        let months = (today.getMonth() - birthDate.getMonth());
+        let days = (today.getDate()-birthDate.getDate());
+        // if(months&&days== "-"){
+        //  months =months+12
+        //  days = days+30
+        // }
         console.log(`You are ${years} years, ${months} months, and ${days} days old.`);
     </Script>
 </body>

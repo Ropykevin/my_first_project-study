@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Using Python or PHP or Java or Ruby or JavaScript
+    Calculate the taxable income.
+    i.e taxable_income = gross salary - (NSSF + NHDF) */
+
+        // Calculate the gross salary
+        function gross_salary(basic_salary, benefits) {
+            basic_salary = parseFloat(prompt("Enter your basic salary: "));
+            benefits = parseFloat(prompt("Enter your benefits: "));
+            return basic_salary + benefits
+        }
+        let grossSalary = gross_salary()
+        console.log("gross salary is :", grossSalary)
+
+        function NHDF() {
+            NHDF_rate = 0.015
+            return grossSalary * NHDF_rate
+        }
+        let Nhdf = NHDF()
+        console.log("Nhdf is", NHDF())
+        function NSSF(grossSalary, NSSF_RATE) {
+            if (grossSalary <= 18000) {
+                let NSSF = (grossSalary * 0.06)
+            } else {
+                NSSF = (18000 * 0.06)
+
+            }
+            return NSSF
+        }
+        let Nssf = NSSF()
+        console.log("nssf is", Nssf)
+
+        function calculateTaxableIncome() {
+            let totalIncome = (grossSalary) - (Nssf + Nhdf);
+            return totalIncome
+        }
+        let taxableIncome = calculateTaxableIncome()
+        console.log("taxable income is ", taxableIncome)
+        function Calculate_payee() {
+            // let Payee = 0
+            if (taxableIncome >= 24000) {
+                 Payee = (taxableIncome * 0.01)
+            } else if (taxableIncome > 24000 && gross_salary <= 32333) {
+                 Payee = (taxableIncome * 0.25)
+            } else {
+                 Payee = (taxableIncome * 0.3)
+
+            }
+            return Payee
+        }
+        let PAYEE = Calculate_payee()
+        console.log("payee is ",PAYEE)
+    </script>
+</body>
+
+</html>
