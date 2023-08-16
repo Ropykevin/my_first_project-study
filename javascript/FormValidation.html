@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="welcome"></p>
+    <form>
+        What`s your Name:<input type="text" id="name"><br>
+        <input type="button" value="submit" onclick="write_name()">
+    </form>
+    
+<!-- <h2>Ropy`s Form Validation</h2>
+
+<form name="myForm" action="" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="fname">
+  <input type="submit" value="Submit"> -->
+</form>
+    <script>
+        function write_name(){
+            let kevin= document.getElementById('welcome')
+            let ropy = document.getElementById('name')
+
+            kevin.innerHTML = `welcome ${ropy.value} `
+        }
+        // function validateForm() {
+        //     let x = document.forms["myForm"]["fname"].value;
+        //     if (x == "") {
+        //         alert("Name must be filled out");
+        //         return false;
+        //     }
+        // }
+    </script>
+</body>
+
+</html>
