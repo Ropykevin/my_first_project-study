@@ -24,43 +24,103 @@
         console.log("gross salary is :", grossSalary)
 
         function NHDF() {
-            NHDF_rate = 0.015
+            NHDF_rate = 0.003
             return grossSalary * NHDF_rate
         }
         let Nhdf = NHDF()
         console.log("Nhdf is", NHDF())
-        function NSSF(grossSalary, NSSF_RATE) {
+        function calculate_Nssf(grossSalary, NSSF_RATE=0.06) {
             if (grossSalary <= 18000) {
-                let NSSF = (grossSalary * 0.06)
+                NSSF=(grossSalary * 0.06)
             } else {
-                NSSF = (18000 * 0.06)
-
+                NSSF=(18000 * 0.06)
             }
-            return NSSF
+            return  NSSF
         }
-        let Nssf = NSSF()
-        console.log("nssf is", Nssf)
-
+        let nssf_value = calculate_Nssf()
+        console.log("nssf is", nssf_value)
+        function NHIF() {
+            if (grossSalary <= 5999) {
+                NHIF_contribution = 150
+            } else if (grossSalary >= 6000 && gross_salary <= 7999) {
+                NHIF_contribution = 300
+            } else if (grossSalary >= 8000 && gross_salary <= 11999) {
+                NHIF_contribution = 400
+            } else if (grossSalary >= 12000 && gross_salary <= 14999) {
+                NHIF_contribution = 500
+            } else if (grossSalary >= 15000 && gross_salary <= 19999) {
+                NHIF_contribution = 600
+            } else if (grossSalary >= 20000 && gross_salary <= 24999) {
+                NHIF_contribution = 750
+            }
+            else if (grossSalary >= 25000 && gross_salary <= 29999) {
+                NHIF_contribution = 850
+            }
+            else if (grossSalary >= 20000 && gross_salary <= 34999) {
+                NHIF_contribution = 900
+            }
+            else if (grossSalary >= 20000 && gross_salary <= 39999) {
+                NHIF_contribution = 950
+            }
+            else if (grossSalary >= 20000 && gross_salary <= 44999) {
+                NHIF_contribution = 100
+            }
+            else if (grossSalary >= 20000 && gross_salary <= 49999) {
+                NHIF_contribution = 110
+            }
+            else if (grossSalary >= 20000 && gross_salary <= 59999) {
+                NHIF_contribution = 1200
+            }
+            else if (grossSalary >= 20000 && gross_salary <= 69999) {
+                NHIF_contribution = 1300
+            }
+            else if (grossSalary >= 20000 && gross_salary <= 79999) {
+                NHIF_contribution = 1400
+            }
+            else if (grossSalary >= 20000 && gross_salary <= 89999) {
+                NHIF_contribution = 1500
+            }
+            else if (grossSalary >= 20000 && gross_salary <= 99999) {
+                NHIF_contribution = 1600
+            }
+            else {
+                NHIF_contribution = 1700
+            }
+            return NHIF_contribution
+        }
+        let Nhif = NHIF()
+        console.log("NHIF IS:", Nhif)
         function calculateTaxableIncome() {
-            let totalIncome = (grossSalary) - (Nssf + Nhdf);
+            let totalIncome = (grossSalary) - (+ Nhdf);
             return totalIncome
         }
         let taxableIncome = calculateTaxableIncome()
         console.log("taxable income is ", taxableIncome)
         function Calculate_payee() {
-            // let Payee = 0
-            if (taxableIncome >= 24000) {
-                 Payee = (taxableIncome * 0.01)
+            let Peronal_relief = 2400
+            if (taxableIncome <= 24000) {
+                Payee = 24000 * 0.1
+                net_payee = payee - Peronal_relief
             } else if (taxableIncome > 24000 && gross_salary <= 32333) {
-                 Payee = (taxableIncome * 0.25)
+                Payee = ((taxableIncome * 0.01) + (8333 * 0.25))
+                net_payee = payee - Peronal_relief
             } else {
-                 Payee = (taxableIncome * 0.3)
-
+                Payee = ((24000 * 0.01) + (8333 * 0.25) + (taxableIncome - 32333) * 0.3)
+                net_payee = payee - Peronal_relief
             }
-            return Payee
+            return net_payee
         }
         let PAYEE = Calculate_payee()
-        console.log("payee is ",PAYEE)
+        console.log("payee is ", Calculate_payee())
+        /*Using Python or PHP or Java or Ruby or JavaScript
+Continue with the same program and calculate an individual’s Net Salary using:
+ net_salary = gross_salary - (nhif + nhdf +  nssf + payee)*/
+        function calculate_net(grossSalary, nhdf, payee) {
+            let net_pay = grossSalary - (Nhdf + Nhif + PAYEE)
+            return net_pay
+        }
+        let Net_pay = calculate_net()
+        console.log(Net_pay)
     </script>
 </body>
 
